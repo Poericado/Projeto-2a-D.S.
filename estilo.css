@@ -76,6 +76,67 @@ nav a.ativo::after {
     opacity: 1;
   }
 }
+/*manipular as imagns para ficar de uma forma mais apreentavel*/
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.img {
+  transition: transform 0.3s;
+  object-fit: cover;
+}
+
+/* Formas */
+.redonda {
+  border-radius: 50%;
+}
+
+.retangular {
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.inclinada {
+  transform: rotate(-5deg);
+}
+
+/* Tamanhos */
+.pequena {
+  width: 120px;
+  height: 120px;
+}
+
+.grande {
+  width: 250px;
+  height: 250px;
+}
+
+/* Posições adicionais (opcional) */
+.esquerda {
+  align-self: flex-start;
+}
+
+.direita {
+  align-self: flex-end;
+}
+
+.centro {
+  align-self: center;
+}
+
+.baixo {
+  margin-top: 40px;
+}
+
+
+
+
 
 /* Barra branca flutuante 
 
