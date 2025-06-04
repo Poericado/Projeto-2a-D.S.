@@ -178,6 +178,12 @@ details[open] {
   border-color: #f96d15;
 }
 
+.centro{
+  position: relative;
+  top: 20px;
+  background-color: #ffe5d4;
+  border-color: #f96d15;
+}
 
 
 /*corres que combinam para guardar para usa futuramente
