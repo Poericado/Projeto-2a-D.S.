@@ -4,6 +4,7 @@ body {
   padding: 0;
   background-color: #f2f2f2;
   color: #333;
+  height: 100vw;
 }
 
 header {
@@ -11,6 +12,17 @@ header {
   color: white;
   padding: 1em;
   text-align: center;
+  position: relative;
+}
+
+.logo-header {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%; /* já incluído na classe .redonda também */
 }
 
 nav a {
@@ -76,83 +88,119 @@ nav a.ativo::after {
     opacity: 1;
   }
 }
-/*manipular as imagns para ficar de uma forma mais apreentavel*/
-.galeria {
+
+/*texto grande e centralizado com caixa flutuante*/
+.titulo-container {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 40px;
-}
-
-.img {
-  transition: transform 0.3s;
-  object-fit: cover;
-}
-
-/* Formas */
-.redonda {
-  border-radius: 50%;
-}
-
-.retangular {
-  width: 300px;
   height: 150px;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+.caixa-flutuante {
+  position: absolute;
+  width: 90%;
+  height: 100px;
+  background-color: #a0a0a0;
+  border-radius: 20px;
+  z-index: 1;
+  box-shadow: 0 10px 30px #ff7f50;
+}
+
+.centralizador-titulo {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  letter-spacing: 1vw;
+  font-size: 2vw;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* Animação de flutuação */
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.caixa-detalhes {
+  background-color: #f0f0f0; /* fundo da caixa */
+  border: 2px solid #ffaa3c; /* laranja dourado */
   border-radius: 10px;
+  padding: 20px;
+  width: fit-content;
+  max-width: 20vw;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.inclinada {
-  transform: rotate(-5deg);
+
+details {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2em;
+  color: #333;
 }
 
-/* Tamanhos */
-.pequena {
-  width: 120px;
-  height: 120px;
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffaa3c;
+  margin-bottom: 10px;
 }
 
-.grande {
-  width: 250px;
-  height: 250px;
+details[open] {
+  background-color: #fff8f0; /* leve destaque quando aberto */
 }
 
-/* Posições adicionais (opcional) */
+/* Cores e posições */
+
 .esquerda {
-  align-self: flex-start;
+  position: relative;
+  top: 20px;
+  left: 35vw;
+  background-color: #fbeec1;
+  border-color: #e67e22;
 }
 
 .direita {
-  align-self: flex-end;
-}
-
-.centro {
-  align-self: center;
-}
-
-.baixo {
-  margin-top: 40px;
+  position: relative;
+  top: 20px;
+  right: 35vw;
+  background-color: #ffe5d4;
+  border-color: #f96d15;
 }
 
 
 
+/*corres que combinam para guardar para usa futuramente
+Laranja Queimado #e67e22 //funciona bem com branco, criam contraste nítido
+Laranja Coral    #f96d15 //funciona bem com branco, criam contraste nítido   
+Laranja Dourado  #ffaa3c //funciona bem com o #444444 (cinza escuro)
+Laranja Pastel   #ffb870 //funciona bem com o #444444 (cinza escuro)
+Tangerina        #ff7f50 //funciona bem com o #a0a0a0 (cinza medio)
+Laranja Néon     #ff9900 //funciona bem com o #a0a0a0 (cinza medio)
+*/
+
+
+
+
+/* hello world*/
+/** hello world*/
+/*// hello world*/
+/*! hello world*/
+/*? hello world*/
+/*todo hello world*/
 
 
 /* Barra branca flutuante 
-
-.indicador-pagina {
-  background-color: white;
-  color: #4CAF50;
-  padding: 0.5em 1em;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  display: inline-block;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-weight: bold;
-  font-size: 1em;
-  animation: flutuar 3s infinite ease-in-out;
-}
 
 @keyframes flutuar {
   0%, 100% {
