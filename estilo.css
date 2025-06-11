@@ -119,6 +119,14 @@ nav a.ativo::after {
   text-transform: uppercase;
 }
 
+.centralizador {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #000000;
+}
+
+
 /* Animação de flutuação */
 @keyframes flutuar {
   0%, 100% {
@@ -130,7 +138,19 @@ nav a.ativo::after {
 }
 
 
-.caixa-detalhes {
+.caixa {
+  background-color: #f0f0f0; /* fundo da caixa */
+  border: 2px solid #ffaa3c; /* laranja dourado */
+  border-radius: 10px;
+  padding: 20px;
+  width: fit-content;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+.caixa-limitada {
   background-color: #f0f0f0; /* fundo da caixa */
   border: 2px solid #ffaa3c; /* laranja dourado */
   border-radius: 10px;
@@ -185,7 +205,12 @@ details[open] {
   border-color: #f96d15;
 }
 
+.img-centro{
+  position: absolute;
+  left: 32vw;
+  top: 35vw;
 
+}
 /*corres que combinam para guardar para usa futuramente
 Laranja Queimado #e67e22 //funciona bem com branco, criam contraste nítido
 Laranja Coral    #f96d15 //funciona bem com branco, criam contraste nítido   
